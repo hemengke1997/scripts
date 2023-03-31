@@ -1,7 +1,7 @@
 {
   "name": "@minko-fe/scripts",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.30.0",
   "description": "A collection of useful scripts",
   "author": "hemengke <https://github.com/hemengke1997>",
