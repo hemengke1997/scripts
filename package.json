@@ -1,17 +1,17 @@
 {
-  "name": "ts-template",
+  "name": "@minko-fe/scripts",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.30.0",
-  "description": "a template for typescript project or plugin",
+  "description": "A collection of useful scripts",
   "author": "hemengke <https://github.com/hemengke1997>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hemengke1997/ts-template.git"
+    "url": "git+https://github.com/hemengke1997/scripts.git"
   },
   "keywords": [
-    "TODO"
+    "scripts"
   ],
   "exports": {
     ".": {

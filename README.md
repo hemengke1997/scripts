@@ -1,6 +1,3 @@
-# ts-template
+# scripts
 
-> a template for typescript project or plugin
-
-- branch `master` => single repo template
-- branch `monorepo` => monorepo template
+> A collection of scripts I use to make my life easier.
