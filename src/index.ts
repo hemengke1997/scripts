@@ -1,1 +1,1 @@
-export { bundleSingleScript } from './esbuild'
+export { bundleSingleScript } from './bundleSingleScript'

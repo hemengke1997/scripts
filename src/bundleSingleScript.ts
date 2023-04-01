@@ -12,12 +12,12 @@ const compilerOptions = tsconfigData?.config.compilerOptions || {}
 
 type BundleOptions = {
   entry: string
-  out: string
+  output: string
   esbuildOptions?: BuildOptions
 }
 
 export async function bundleSingleScript(options: BundleOptions) {
-  const { entry, out, esbuildOptions } = options
+  const { entry, output, esbuildOptions } = options
 
   const pathKeys = Object.keys(compilerOptions?.paths || {}).filter((t) => t.startsWith('@'))
 
@@ -32,9 +32,6 @@ export async function bundleSingleScript(options: BundleOptions) {
     sourcemap: false,
     treeShaking: true,
     splitting: false,
-    banner: {
-      js: `/* eslint-disable */\n"use strict";`,
-    },
     ...esbuildOptions,
     plugins: [
       {
@@ -82,10 +79,11 @@ export async function bundleSingleScript(options: BundleOptions) {
           })
         },
       },
+      ...(esbuildOptions?.plugins || []),
     ],
   })
   const { text } = result.outputFiles?.[0] || { text: '' }
-  const filePath = out
+  const filePath = output
   if (fs.existsSync(filePath)) {
     await fs.remove(filePath)
   }
